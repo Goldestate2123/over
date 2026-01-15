@@ -795,48 +795,57 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Responsive */
-/* მაგ. ტაბლეტისთვის */
-@media (max-width: 992px) {
+/* დიდი ეკრანები */
+@media (max-width: 1200px) {
   .listings-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* optional */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ტელეფონისთვის */
-@media (max-width: 576px) {
+/* საშუალო ეკრანები (მაგ. ტაბლეტი) */
+@media (max-width: 900px) {
   .listings-grid {
-    grid-template-columns: 1fr !important; /* !important აძლევს უპირატესობას */
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr); /* ორი სვეტი */
+    gap: 20px;
+  }
+}
+
+/* პატარა ეკრანები - უფრო ადრე გადავიდა ერთ სვეტზე */
+@media (max-width: 800px) {
+  .listings-grid {
+    grid-template-columns: 1fr; /* მხოლოდ ერთი სვეტი */
+    gap: 24px;
+    padding: 0 16px;
   }
 
   .listing-card {
-    border-radius: 12px;
+    width: 100%;
+    border-radius: 14px;
   }
 
   .listing-image img {
-    height: 200px;
+    height: 220px;
   }
 
   .listing-body {
-    padding: 18px;
+    padding: 20px;
   }
 
   .listing-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .listing-address {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .listing-features li {
-    font-size: 14px;
-    gap: 8px;
+    font-size: 15px;
+    gap: 10px;
   }
 
   .listing-features img {
-    width: 20px;
+    width: 22px;
   }
 }
 
